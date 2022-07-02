@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer("distance");
             $table->integer("cost");
             $table->tinyInteger("rate");
-            $table->enum("region", ["middle_east", "italy", "united_states", "france", "south_america"]);
+            $table->enum("region", ["flexible", "middle_east", "italy", "united_states", "france", "south_america"]);
         });
     }
 
