@@ -19,8 +19,9 @@ return new class extends Migration
             $table->integer("category_id");
             $table->integer("gallery_id");
             $table->integer("distance");
-            $table->integer("cost");
+            $table->integer("cost_per_night");
             $table->tinyInteger("rate");
+            $table->integer("favorited");
             $table->enum("region", ["flexible", "middle_east", "italy", "united_states", "france", "south_america"]);
             $table->timestamps();
         });

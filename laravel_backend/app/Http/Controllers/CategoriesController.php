@@ -7,7 +7,7 @@ use App\Models\Category;
 
 class CategoriesController extends Controller
 {
-    public function getCategoriesAndIslandsStay($categ_id) {
+    public function getCategoriesAndSelectedStays($categ_id) {
 
         $allCategories = array();
         $stays = array();
@@ -25,6 +25,5 @@ class CategoriesController extends Controller
             "categories" => $allCategories,
             "island_stays" => $stays
         ]);
-
     }
 }

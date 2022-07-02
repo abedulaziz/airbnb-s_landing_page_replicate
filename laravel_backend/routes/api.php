@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\StaysController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// categories APIs
+Route::get("/get_categories/{categ_id}", [CategoriesController::class, "getCategoriesAndSelectedStays"]);
 
-Route::get("/{categ_id}", [CategoriesController::class, "getCategoriesAndIslandsStay"]);
+// stays APIs
+Route::get("/get_stays/{stay_id}/favorite", [StaysController::class, "favoriteStay"]);

@@ -21,8 +21,9 @@ class StayFactory extends Factory
             "category_id" => 1,
             "gallery_id" => 1,
             "distance" => 1334,
-            "cost" => 300,
+            "cost_per_night" => 300,
             "rate" => 2,
+            "favorited" => 34,
             "region" => fake()->randomElement(['flexible' ,'middle_east', 'italy', 'united_states', 'france']),
         ];
     }
