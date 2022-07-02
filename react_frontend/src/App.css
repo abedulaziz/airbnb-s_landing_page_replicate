@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
+:root {
+  --theme-color: #ff385c
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #FFF;
+  color: #000;
+  font-family: 'Inter', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1, h2, h3, h4, p {
+  margin: 0
+}
+
+.container {
+  padding: 0 80px
+}
+
+
+/* ----------- start header ----------- */
+
+header {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+header .header_items_wrapper {
   display: flex;
-  flex-direction: column;
+  padding: 17px 0;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header .header_items_wrapper .logo {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+header .header_items_wrapper .logo svg{
+  width: 33px;
+}
+
+header .header_items_wrapper .logo .airbnb{
+  color: var(--theme-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+header .header_items_wrapper .search_box {
+  border: 1px solid #d5d5d5 ;
+  padding: 8px 5px 8px 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #f0f0f0;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+
+}
+
+header .header_items_wrapper .search_box .search_wrapper{
+  display: flex;
+  align-items: center;
+}
+
+header .header_items_wrapper .search_box .search_wrapper >div:not(:last-child) {
+  border-right: 1px solid rgb(198, 198, 198);
+  padding: 0 10px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+header .header_items_wrapper .search_box .search_wrapper .add_guests_and_search {
+  padding-left: 10px;
+  color: gray;
+}
+
+header .header_items_wrapper .search_box .search_wrapper .add_guests_and_search span {
+  margin-right: 10px;
+}
+
+header .header_items_wrapper .search_box .search_wrapper .add_guests_and_search .icon_wrapper {
+  display: inline-block;
+  background-color: var(--theme-color);
+  padding: 7px;
+  border-radius: 50px;
+}
+
+header .search_box .search_wrapper .add_guests_and_search .icon_wrapper svg {
+  color: #FFF;
+  width: 19px;
+  height: 14px
+}
+
+
+header .user_options {
+  display: flex;
+  align-items: center;
+}
+
+header .user_options >div:not(:last-child) {
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+header .user_options .language_search {
+  width: 42px;
+  font-size: initial !important;
+}
+
+header .user_options >div:not(:last-child):hover {
+  background-color: #F7F7F7;
+}
+
+header .user_options .user_menu {
+  border:1px solid #f0f0f0;
+  padding: 7px 5px 7px 15px;
+  border-radius: 50px;
+  margin-left: 5px;
+  transition: box-shadow 0.2s ease;
+}
+
+header .user_options .user_menu:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+header .user_options .user_menu svg {
+  color: #676767;
+}
+
+header .user_options .user_menu .profile_img {
+  display: inline-block;
+  margin-left: 15px;
+  background-color: #676767;
+  padding: 5px;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+}
+
+header .user_options .user_menu .profile_img svg {
+  color: #FFF;
+  margin:2px 0 0 3px;
+}
+
+/* header media queries */
+
+@media (max-width: 1127px) {
+  .container{
+    padding: 0 40px;
+    
+  } 
+
+@media (max-width: 949px) {
+  header .header_items_wrapper .search_box {
+    position: relative;
+    left: 0;
+    transform: none;
   }
 }
+}
+
+/* ----------- end header ----------- */
