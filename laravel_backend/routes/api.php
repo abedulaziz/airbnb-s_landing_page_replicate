@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use app\Http\Controllers\CategoriesAndStaysController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get("/", [CategoriesAndStaysController::class, "getCategoriesAndIslandsStay"]);
+Route::get("/{categ_id}", [CategoriesController::class, "getCategoriesAndIslandsStay"]);
