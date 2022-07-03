@@ -12,4 +12,8 @@ class Category extends Model
     public function stays() {
         return $this->hasMany(Stay::class);
     }
+
+    public function getStaysGalleries() {
+        return $this->hasManyThrough(Gallery::class, Stay::class);
+    }
 }

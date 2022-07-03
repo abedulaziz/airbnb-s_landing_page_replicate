@@ -1,14 +1,23 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-const Stay = ({src, stay_location, rating, distance, cost}) => {
+const Stay = ({stay_location, rating, distance, cost, gallery}) => {
+
+
   return (
     <div className='stay'>
 
       <div className='stay_img'>
         <div className="img_wrapper">
-          <img src="jd" />
+
+            {gallery && Object.keys(gallery).map((prop, i) => {
+              console.log(gallery[prop] instanceof String)
+
+                if (typeof gallery[prop] === "string" && gallery[prop].startsWith("http"))
+                  return <img key={i} src={gallery[prop]} />
+                
+            })}
 
         </div>
       </div>

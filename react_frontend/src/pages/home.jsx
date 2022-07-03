@@ -17,7 +17,7 @@ const Home = () => {
 
     const getCategoriesAndSpecifiedStays = async () => {
       
-      const getData = await fetch("http://127.0.0.1:8000/api/get_categories/1")
+      const getData = await fetch("http://127.0.0.1:8000/api/get_categories/8")
       const formatedData = await getData.json();
 
       console.log(formatedData)
@@ -69,6 +69,7 @@ const Home = () => {
                   rating={stay.rate} 
                   distance={stay.distance}
                   cost={stay.cost_per_night}
+                  gallery={stay.gallery}
                 />
               ) : "No stays found"}
 
