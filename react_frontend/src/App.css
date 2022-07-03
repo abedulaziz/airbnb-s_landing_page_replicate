@@ -228,6 +228,7 @@ main .categories .houses_options .houses_filters {
   line-height: 2.8;
   font-size: 12px;
   cursor: pointer;
+  min-width: max-content;
 }
 
 main .categories .houses_options .houses_filters svg {

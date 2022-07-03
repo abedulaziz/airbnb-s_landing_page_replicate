@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
+            $table->integer("stay_id");
             $table->mediumText("image1");
             $table->mediumText("image2");
             $table->mediumText("image3");
@@ -35,6 +36,7 @@ return new class extends Migration
             $table->mediumText("image18")->nullable();
             $table->mediumText("image19")->nullable();
             $table->mediumText("image20")->nullable();
+            $table->timestamps();
         });
     }
 
