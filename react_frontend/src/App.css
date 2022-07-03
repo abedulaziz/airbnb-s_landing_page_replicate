@@ -62,7 +62,7 @@ header .header_items_wrapper .search_box {
   left: 50%;
   transform: translateX(-50%);
   font-size: 13px;
-
+  margin: 0 10px;
 }
 
 header .header_items_wrapper .search_box .search_wrapper{
@@ -157,9 +157,11 @@ header .user_options .user_menu .profile_img svg {
 @media (max-width: 1127px) {
   .container{
     padding: 0 40px;
-    
   } 
-
+  header .header_items_wrapper .logo .airbnb {
+    display: none
+  }
+}
 @media (max-width: 949px) {
   header .header_items_wrapper .search_box {
     position: relative;
@@ -167,6 +169,78 @@ header .user_options .user_menu .profile_img svg {
     transform: none;
   }
 }
-}
+
 
 /* ----------- end header ----------- */
+
+/* ----------- start main ----------- */
+
+main .categories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px
+}
+
+main .categories .categories_wrapper{
+  display: flex;
+  text-align: center;
+  gap: 30px;
+}
+
+main .categories .categories_wrapper .house {
+  padding: 4px 0 14px;
+  margin-top: 12px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+main .categories .categories_wrapper .house.active .house_name{
+  color: #000;
+}
+
+main .categories .house:active .house_name, main .categories .house:hover .house_name{
+  color: #000;
+  transition: color .2s ease;
+}
+
+main .categories .house .house_name {
+  color: #717171;
+  font-size: 12px;
+}
+
+main .categories .houses_options {
+  display: flex;
+  align-items: center;
+}
+
+main .categories .houses_options .next_categories .arrow_wrapper {
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+
+main .categories .houses_options .next_categories .arrow_wrapper svg {
+  top: 44%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+
+main .categories .houses_options .houses_filters {
+  padding: 7px 16px;
+  border: 1px solid #dcdcdc;
+  height: max-content;
+  border-radius: 10px;
+  line-height: 2.8;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+main .categories .houses_options .houses_filters svg {
+  margin-right: 10px;
+}
