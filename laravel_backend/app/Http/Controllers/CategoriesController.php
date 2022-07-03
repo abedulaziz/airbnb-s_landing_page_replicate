@@ -12,7 +12,7 @@ class CategoriesController extends Controller
         $allCategories = array();
         $stays = array();
 
-        foreach (Category::select("name", "image")->get() as $category) {
+        foreach (Category::select("id", "name", "image_URL")->get() as $category) {
 
             array_push($allCategories, $category);
         };
@@ -23,7 +23,7 @@ class CategoriesController extends Controller
 
         return response()->json([
             "categories" => $allCategories,
-            "island_stays" => $stays
+            "specified_stays" => $stays
         ]);
     }
 }

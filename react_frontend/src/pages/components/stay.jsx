@@ -8,7 +8,7 @@ const Stay = ({src, stay_location, rating, distance, cost}) => {
 
       <div className='stay_img'>
         <div className="img_wrapper">
-          <img src={src} />
+          <img src="jd" />
 
         </div>
       </div>
