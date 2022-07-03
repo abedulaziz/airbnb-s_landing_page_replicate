@@ -152,25 +152,6 @@ header .user_options .user_menu .profile_img svg {
   margin:2px 0 0 3px;
 }
 
-/* header media queries */
-
-@media (max-width: 1127px) {
-  .container{
-    padding: 0 40px;
-  } 
-  header .header_items_wrapper .logo .airbnb {
-    display: none
-  }
-}
-@media (max-width: 949px) {
-  header .header_items_wrapper .search_box {
-    position: relative;
-    left: 0;
-    transform: none;
-  }
-}
-
-
 /* ----------- end header ----------- */
 
 /* ----------- start main ----------- */
@@ -185,6 +166,7 @@ main .categories .categories_wrapper{
   display: flex;
   text-align: center;
   gap: 30px;
+  overflow-x: auto;
 }
 
 main .categories .categories_wrapper .house {
@@ -252,6 +234,10 @@ main .categories .houses_options .houses_filters svg {
   margin-right: 10px;
 }
 
+main .stays {
+  margin-top: 30px;
+}
+
 main .stays .stays_wrapper{
   display: flex;
   flex-wrap: wrap;
@@ -260,9 +246,99 @@ main .stays .stays_wrapper{
 
 main .stays .stay {
   width: calc((100% - 75px) / 4);
-  height: calc((100% - 75px) / 4);
+  height: max-content;
+}
+
+main .stays .stay .stay_img .img_wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  height: max-content;
+  aspect-ratio: 1/1;
 }
 
 main .stays .stay .stay_img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+main .stays .stay .info .location_and_rating{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 5px;
+}
+
+main .stays .stay .info .location_and_rating .stay_location {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+main .stays .stay .info .location_and_rating .stay_rating {
+  font-size: 13px;
+}
+
+main .stays .stay .info .location_and_rating .stay_rating svg {
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+main .stays .stay .info .distance, main .stays .stay .info .num_of_days {
+  font-size: 14px;
+  color: #717171;
+}
+
+main .stays .stay .info .cost_per_night {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+main .stays .stay .info .cost_per_night .cost_in_dollars {
+  font-weight: 600;
+}
+
+/* stays media queries */
+@media (max-width: 1127px) {
+  
+}
+
+
+
+
+/* global media queries */
+
+@media (max-width: 1127px) {
+  .container{
+    padding: 0 40px;
+  } 
+
+  header .header_items_wrapper .logo .airbnb {
+    display: none
+  }
+
+  main .stays .stay {
+    width: calc((100% - 50px) / 3);
+  }
+}
+
+@media (max-width: 949px) {
+  header .header_items_wrapper .search_box {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  main .stays .stay {
+    width: calc((100% - 25px) / 2);
+  }
+}
+
+@media (max-width: 743px) {
+
+}
+
+@media (max-width: 550px) {
+  main .stays .stay {
+    width: 100%;
+  }
 }
