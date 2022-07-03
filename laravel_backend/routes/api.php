@@ -26,3 +26,4 @@ Route::get("/get_categories/{categ_id}", [CategoriesController::class, "getCateg
 
 // stays APIs
 Route::get("/get_stays/{stay_id}/favorite", [StaysController::class, "favoriteStay"]);
+Route::get("/get_categories/{categ_id}/get_stays", [StaysController::class, "getSelectedStays"]);
