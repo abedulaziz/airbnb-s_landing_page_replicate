@@ -193,6 +193,13 @@ main .categories .categories_wrapper .house {
   background-color: inherit;
   border: none;
   cursor: pointer;
+  min-width: 56px;
+}
+
+main .categories .categories_wrapper .house .house_icon img{
+  width: 24px;
+  color: #717171;
+  margin-bottom: 5px;
 }
 
 main .categories .categories_wrapper .house.active .house_name{
@@ -243,4 +250,19 @@ main .categories .houses_options .houses_filters {
 
 main .categories .houses_options .houses_filters svg {
   margin-right: 10px;
+}
+
+main .stays .stays_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+} 
+
+main .stays .stay {
+  width: calc((100% - 75px) / 4);
+  height: calc((100% - 75px) / 4);
+}
+
+main .stays .stay .stay_img img {
+  width: 100%;
 }
