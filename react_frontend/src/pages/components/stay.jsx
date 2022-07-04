@@ -12,7 +12,6 @@ const Stay = ({stay_location, rating, distance, cost, gallery}) => {
         <div className="img_wrapper">
 
             {gallery && Object.keys(gallery).map((prop, i) => {
-              console.log(gallery[prop] instanceof String)
 
                 if (typeof gallery[prop] === "string" && gallery[prop].startsWith("http"))
                   return <img key={i} src={gallery[prop]} />
